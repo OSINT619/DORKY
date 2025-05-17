@@ -1,0 +1,100 @@
+.operator-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.neuomorphic {
+    background: #e0e5ec;
+    box-shadow: 9px 9px 16px rgb(163,177,198,0.6), 
+                -9px -9px 16px rgba(255,255,255, 0.5);
+}
+
+.neuomorphic-inset {
+    background: #e0e5ec;
+    box-shadow: inset 6px 6px 10px rgb(163,177,198,0.6), 
+                inset -6px -6px 10px rgba(255,255,255, 0.5);
+}
+
+.neuomorphic-button {
+    transition: all 0.2s ease;
+    background: #e0e5ec;
+    box-shadow: 6px 6px 12px rgb(163,177,198,0.6), 
+                -6px -6px 12px rgba(255,255,255, 0.5);
+}
+
+.neuomorphic-button:hover {
+    box-shadow: 4px 4px 8px rgb(163,177,198,0.6), 
+                -4px -4px 8px rgba(255,255,255, 0.5);
+}
+
+.neuomorphic-button:active {
+    box-shadow: inset 4px 4px 8px rgb(163,177,198,0.6), 
+                inset -4px -4px 8px rgba(255,255,255, 0.5);
+}
+
+.search-input {
+    transition: all 0.3s ease;
+    background: #e0e5ec;
+    border: none;
+    box-shadow: inset 4px 4px 8px rgb(163,177,198,0.6), 
+                inset -4px -4px 8px rgba(255,255,255, 0.5);
+}
+
+.search-input:focus {
+    outline: none;
+    box-shadow: inset 6px 6px 10px rgb(163,177,198,0.6), 
+                inset -6px -6px 10px rgba(255,255,255, 0.5);
+}
+
+.copy-button {
+    transition: all 0.2s ease;
+}
+
+.copy-button:hover {
+    transform: scale(1.05);
+}
+
+.copy-button:active {
+    transform: scale(0.95);
+}
+
+.gooey-title {
+    position: relative;
+    filter: url('#gooey');
+    padding: 20px;
+}
+
+.gooey-title span {
+    display: inline-block;
+    transform-origin: center;
+    transition: all 0.6s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+    position: relative;
+}
+
+.magnetic-area {
+    display: inline-block;
+    position: relative;
+}
+
+.gooey-letter {
+    position: relative;
+}
+
+.gooey-letter::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: #e0e5ec;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: transform 0.3s ease;
+    z-index: -1;
+}
+
+.gooey-letter.active::after {
+    transform: scale(1.5);
+}
